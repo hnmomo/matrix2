@@ -117,14 +117,14 @@ public class MatrixSolver {
         return r;
     }
     public static String fraction(double n){
-        double s=n*1000;
-        n=(double)Math.round(s)/1000;
+        double s=n*10000;
+        n=(double)Math.round(s)/10000;
         boolean t;
         if(n-Math.floor(n)==0){
             return String.valueOf((int)n);
         }else{
             int p=2;
-            while((p*n-Math.floor(p*n))!=0){
+            while(((double)Math.round(p*n*1000)/1000-Math.floor(p*n))!=0){
                 p++;
             }
             int q=(int)(p*n);
@@ -145,7 +145,7 @@ public class MatrixSolver {
                 a[j][i]=sc.nextDouble();
             }
         }
-        System.out.println("1.solve for determinant\n2.solve equation system\n3.rank\n4.standard echelon\n5.inverse");
+        System.out.println("1.determinant\n2.solve\n3.rank\n4.standard echelon\n5.inverse");
         c=sc.nextInt();
         switch(c){
             case 1:
@@ -164,7 +164,7 @@ public class MatrixSolver {
                     }else{
                         System.out.println("the solution to the system is:");
                         for(int i=0;i<r.length;i++){
-                            System.out.println("x"+i+"="+fraction(r[i]));
+                            System.out.println("x"+(i+1)+"="+fraction(r[i]));
                         }
                     }
                 }else{
