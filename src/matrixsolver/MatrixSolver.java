@@ -1,17 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package matrixsolver;
-
 import java.util.Scanner;
-
-/**
- *
- * @author jihua5758
- */
 public class MatrixSolver {
     public static double calculateDeterminant(double[][]a){
         double r=0;
