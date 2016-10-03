@@ -1,4 +1,4 @@
-//test
+//test2
 package matrixsolver;
 import java.util.Scanner;
 public class MatrixSolver {
